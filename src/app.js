@@ -16,3 +16,8 @@ app.use(function (req, res, next){
     )
     next();
 });
+
+app.use("/",index);//toda vez que eu acessar a rota / (barra) é para acessar(instanciar) a const index 
+
+module.exports = app; //para exportar o arquivo, assim irei conseguir requisitar coisas que existem dentro dela em toda a aplicação
+
