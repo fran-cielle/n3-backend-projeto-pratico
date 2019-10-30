@@ -3,10 +3,7 @@ const app = express();//instancia todas as ferramentas do express
 
 //roteamento das rotas 
 
-const index = require("./routes/index"); //joga o caminho(./routes/index) dentro de uma variável(index)
-//const professoras = require("./routes/professorasRoute");
-
-//Middleware - para validar 
+const index = require("./routes/index"); 
 
 app.use(function (req, res, next){
     res.header("Access-Control-Allow-Origin", "*");//permite a inda e vinda de todas as informações para todos 
