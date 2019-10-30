@@ -1,1 +1,1 @@
-const professoras = require("../model/professoras.json")
+const tarefas = require("../model/listaControle.json")
