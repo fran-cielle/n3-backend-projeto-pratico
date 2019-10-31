@@ -7,6 +7,7 @@ const index = require("./routes/index");
 //requisitar o caminho de tarefas
 const tarefas = require("./routes/listaTarefasRoutes"); 
 
+
 app.use(function (req, res, next){
     res.header("Access-Control-Allow-Origin", "*");
     res.header(//header - "etiquetas" que irão validar e guardar informações 
