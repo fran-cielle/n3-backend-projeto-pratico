@@ -16,3 +16,13 @@ exports.getConcluido = (req, res) =>{
     })
     res.status(200).send(concluidos)
 }
+
+exports.getByName = (req, res) => {
+    const name = req.params.nomeColaborador
+    console.log(name);
+
+    const pegarNome = tarefas.filter(verificarNome =>{
+        return verificarNome.nomeColaborador == name; //pegar nome da pessoa que foi solicitada pelo params 
+    })
+     res.status(200).send(pegarNome);//enviar a const que armazenou o filtro da função
+}
