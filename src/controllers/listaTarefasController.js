@@ -16,15 +16,22 @@ exports.getConcluido = (req, res) =>{
     })
     res.status(200).send(concluidos)
 }
+//Função que transforma string em data - CARCAÇA, pois essa função inicialmente não recebe nenhum 
+function transfStringEmDt(data){//chamando função que pega o valor como string e transforma em data
+  const dataSplit = data.split("/");// pega o valor e da um split com a / em cada data e remove a barrafil
+  const dataOrdenada = dataSplit[1] +  '-' + dataSplit[0] +  '-' + dataSplit[2]; //o metodo do date recebe informações como mes [1] dia[2] e ano[3] e - entre elas
+  const dataFormatada = new Date (dataOrdenada); 
 
+  return dataFormatada;
+}
 
-
+//metodo que usa a função que transforma string em data 
 exports.ListarPorDt = (req, res) =>{
    const data = tarefas.sort(function (a, b) {
-    if (a.dataInclusao > b.dataInclusao) {
+    if (transfStringEmDt(a.dataInclusao) < transfStringEmDt(b.dataInclusao)) {
       return 1;
     }
-    if (a.dataInclusao < b.dataInclusao) {
+    if (transfStringEmDt(a.dataInclusao > b.dataInclusao)) {
       return -1;
     }
     // a must be equal to b
