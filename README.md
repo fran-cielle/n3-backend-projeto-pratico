@@ -2,10 +2,10 @@
 Objetivo projeto
 Exibir via API uma listagem de tarefas, com rotas para listagem por ID, nome colaborador e por data de início do projeto.
 
-###Tecnologias usadas
+### Tecnologias usadas
 Para desenvolver o projeto utilizei a tecnologia Node JS.Para o download dos pacotes utilizei o NPM, porém você poderá usar o gerenciador de pacotes de sua preferência.
 
-###Instalação
+### Instalação
 Para clonar este repositório você deverá acessar o git bash (Windows) ou terminal (Linux, MAC) e digitar o seguinte comando:
 #markdown
 - git clone https://github.com/fran-cielle/n3-backend-projeto-pratico.git
@@ -15,7 +15,7 @@ Para clonar este repositório você deverá acessar o git bash (Windows) ou term
 - npm install 
 - Se você está utilizando outro gerenciador de pacotes apenas altere o npm para seu respectivo instalador.
 
-###Endpoints utilizados
+### Endpoints utilizados
 Os endpoints criados foram os seguintes:
 
 GET /:id => Exibe os dados de acordo com o ID inserido
